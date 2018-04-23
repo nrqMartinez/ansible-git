@@ -1,0 +1,13 @@
+---
+- hosts: gitrepo 
+  #vars:
+  #  http_port: 80
+  #  max_clients: 200
+  remote_user: root
+  #become: yes
+  tasks:
+  - name: Git environment
+    include: tasks/git.yml
+
+  - name: r10k environment
+    include: tasks/r10k.yml

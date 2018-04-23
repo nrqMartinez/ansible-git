@@ -1,0 +1,48 @@
+#- name: Creating r10k environment
+- name: Creating r10k root dir
+  file:
+    path: /var/r10k
+    state: directory
+    owner: git
+    group: git
+    mode: 0744
+
+- name: Creating r10k bin dir
+  file:
+    path: /var/r10k/bin
+    state: directory
+    owner: git
+    group: git
+    mode: 0744
+
+- name: Creating r10k cache dir
+  file:
+    path: /var/r10k/cache
+    state: directory
+    owner: git
+    group: git
+    mode: 0744
+
+- name: Creating r10k incoming dir
+  file:
+    path: /var/r10k/incoming
+    state: directory
+    owner: git
+    group: git
+    mode: 0744
+
+- name: Creating r10k processed dir
+  file:
+    path: /var/r10k/processed
+    state: directory
+    owner: git
+    group: git
+    mode: 0744
+    
+- name: Creating r10k environments dir
+  file:
+    path: /var/r10k/environments
+    state: directory
+    owner: git
+    group: git
+    mode: 0744

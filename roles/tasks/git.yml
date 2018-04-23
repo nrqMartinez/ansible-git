@@ -1,0 +1,24 @@
+- name: Creating group git
+  group:
+    name: git
+    state: present
+
+
+- name: Creating user git
+  user:
+    name: git
+    state: present
+    home: /var/opt/gitlab
+    create_home: yes
+    generate_ssh_key: no
+    group: git
+    shell: /bin/bash
+    comment: Git user
+
+- name: Creating binary dir
+  file:
+    path: /var/opt/gitlab/bin
+    state: directory
+    owner: git
+    group: git
+    mode: 0744
